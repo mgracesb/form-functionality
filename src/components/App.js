@@ -8,7 +8,7 @@ class App extends React.Component {
     super(props);
 
     this.changeInputValue = this.changeInputValue.bind(this);
-    // this.resetEverything = this.resetEverything.bind(this);
+    this.resetEverything = this.resetEverything.bind(this);
     this.state = { name: "", job: "", description: "" };
     this.startPoint = this.state;
   }
@@ -26,25 +26,26 @@ class App extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <Form
-          name={this.state.name}
-          job={this.state.job}
-          description={this.state.description}
-          changeInputValue={this.changeInputValue}
-        />
+        <div className="box">
+          <Form
+            name={this.state.name}
+            job={this.state.job}
+            description={this.state.description}
+            changeInputValue={this.changeInputValue}
+          />
+          <button
+            type="button"
+            className="resetForm"
+            onClick={this.resetEverything}
+          >
+            Reset
+          </button>
+        </div>
         <Preview
           name={this.state.name}
           job={this.state.job}
           description={this.state.description}
         />
-
-        <button
-          type="button"
-          className="resetForm"
-          onClick={this.resetEverything}
-        >
-          Reset
-        </button>
       </div>
     );
   }
