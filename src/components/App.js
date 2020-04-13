@@ -41,6 +41,14 @@ class App extends React.Component {
             Reset
           </button>
         </div>
+        <div className="box2">
+          <input
+            type="checkbox"
+            id="checkbox"
+            className="changeModeButton"
+          ></input>
+          <label htmlFor="checkbox" className="changeModeLabel"></label>
+        </div>
         <Preview
           name={this.state.name}
           job={this.state.job}
