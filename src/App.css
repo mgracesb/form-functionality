@@ -16,7 +16,7 @@
   padding-bottom: 20px;
 }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 780px) {
   .wrapper {
     flex-direction: row;
     background-color: #f5f7fc;
@@ -26,9 +26,11 @@
 .box {
   height: 40vh;
   width: 90vw;
+  order: 3;
+  -webkit-order: 3;
 }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 780px) {
   .box {
     width: 30vw;
     padding: 2em;
@@ -36,6 +38,8 @@
     flex-direction: column;
     align-items: flex-end;
     background-color: #f5f7fc;
+    order: 2;
+    -webkit-order: 2;
   }
 }
 
@@ -74,11 +78,15 @@ input {
   height: 40vh;
   display: flex;
   justify-content: center;
+  order: 3;
+  -webkit-order: 3;
 }
 @media all and (min-width: 780px) {
   .box3 {
     position: static;
     width: 50%;
+    order: none;
+    -webkit-order: none;
   }
 }
 
@@ -96,7 +104,7 @@ p {
     -5px -5px 10px rgba(255, 255, 255, 0.85);
 }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 780px) {
   p {
     margin-left: 30px;
   }
@@ -107,6 +115,8 @@ label {
 }
 
 .resetForm {
+  order: 1;
+  -webkit-order: 1;
   margin-top: 25px;
   width: 60px;
   font-size: 0.7em;
@@ -118,6 +128,12 @@ label {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15),
     -5px -5px 10px rgba(255, 255, 255, 0.85);
   transition: all 0.5s ease 0s;
+}
+@media all and (min-width: 780px) {
+  .resetForm {
+    order: none;
+    -webkit-order: none;
+  }
 }
 .resetForm:hover {
   color: #95979c;
@@ -149,7 +165,7 @@ label {
   top: 1px;
   right: 1px;
 }
-@media all and (min-width: 1000px) {
+@media all and (min-width: 780px) {
   .box2 {
     position: absolute;
     top: 45%;
@@ -172,7 +188,7 @@ input[type="checkbox"] {
 input:checked[type="checkbox"] {
   background: rgb(248, 174, 255);
 }
-@media all and (max-width: 1000px) {
+@media all and (max-width: 780px) {
   input:checked[type="checkbox"] {
     background: rgb(71, 219, 83);
   }
